@@ -1,6 +1,7 @@
 .products {
   padding: 60px 0;
   text-align: center;
+
   &-wrapper {
     display: flex;
     align-items: center;
@@ -31,15 +32,16 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     margin-bottom: 60px;
-    
+    justify-items: center;
+
     .card {
       background: #fff;
       border-radius: 15px;
       padding: 20px;
       transition: all 0.2s ease;
       position: relative;
-      
-      
+      width: 100%;
+      max-width: 334px;
 
       &:hover {
         transform: translateY(-10px);
@@ -51,9 +53,12 @@
         align-items: center;
         margin-bottom: 15px;
         background: #f6f6f6;
-        width: 334px;
-        height: 337px;
-        
+        width: 100%;
+        max-width: 334px;
+        height: auto;
+        max-height: 337px;
+        position: relative;
+
         .icons {
           height: 82px;
           width: 32px;
@@ -62,21 +67,25 @@
           justify-content: center;
           flex-direction: column;
           position: absolute;
-          top: 30px;
-          right: 30px;
+          top: 10px;
+          right: 10px;
           transition: transform 0.2s ease;
           cursor: pointer;
+
           img:hover {
             transform: scale(1.1);
           }
+
           img:active {
             transform: scale(1.2);
           }
         }
 
         img {
-          width: 250px;
-          height: 280px;
+          width: 100%;
+          height: auto;
+          max-height: 280px;
+          object-fit: cover;
         }
       }
 
@@ -136,5 +145,38 @@
     &:hover {
       background: #3b49d1;
     }
+  }
+}
+
+@media (max-width: 990px) {
+  .products-card__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    justify-items: center;
+  }
+
+  .products-card__wrapper .card {
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+  }
+
+  .card__image {
+    width: 100%;
+    height: auto;
+    max-height: 337px;
+  }
+
+  .card__image .icons {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .products-card__wrapper {
+    grid-template-columns:1fr;
+    justify-items: center;
+    gap: 15px;
   }
 }

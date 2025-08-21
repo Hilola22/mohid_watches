@@ -77,5 +77,78 @@
     }
     
   }
+  @media (max-width: 768px) {
+    .navbar__collection{
+      display: none;
+      
+    }
+  }
 }
+
+.mobile-nav {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #111;
+    box-shadow: 0 -2px 6px rgba(0,0,0,0.3);
+    z-index: 1000;
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 0;
+      padding: 10px 0;
+      list-style: none;
+
+      li {
+        button {
+          background: none;
+          border: none;
+          color: #fff;
+          font-size: 22px;
+          cursor: pointer;
+
+          &:hover {
+            color: orange;
+          }
+        }
+      }
+    }
+  }
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+
+  &__content {
+    background: #fff;
+    padding: 20px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+  }
+
+  &__close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
 
