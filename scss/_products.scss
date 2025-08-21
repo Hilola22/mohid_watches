@@ -1,0 +1,140 @@
+.products {
+  padding: 60px 0;
+  text-align: center;
+  &-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 95px;
+  }
+
+  .headings {
+    margin-bottom: 40px;
+
+    p {
+      color: #6c63ff;
+      font-size: 16px;
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+
+    h2 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #1e1d1d;
+    }
+  }
+
+  .products-card__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 60px;
+    
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      transition: all 0.2s ease;
+      position: relative;
+      
+      
+
+      &:hover {
+        transform: translateY(-10px);
+      }
+
+      .card__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+        background: #f6f6f6;
+        width: 334px;
+        height: 337px;
+        
+        .icons {
+          height: 82px;
+          width: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          position: absolute;
+          top: 30px;
+          right: 30px;
+          transition: transform 0.2s ease;
+          cursor: pointer;
+          img:hover {
+            transform: scale(1.1);
+          }
+          img:active {
+            transform: scale(1.2);
+          }
+        }
+
+        img {
+          width: 250px;
+          height: 280px;
+        }
+      }
+
+      .card__body {
+        h3 {
+          font-size: 24px;
+          font-family: "Poppins", sans-serif;
+          font-weight: 600;
+          margin-bottom: 10px;
+          color: black;
+        }
+
+        .stars {
+          display: flex;
+          justify-content: center;
+          gap: 3px;
+          margin-bottom: 10px;
+        }
+
+        .price {
+          display: block;
+          font-size: 16px;
+          font-weight: 700;
+          color: #111;
+
+          del {
+            color: #999;
+            font-weight: 400;
+            font-size: 18px;
+            font-family: "Poppins", sans-serif;
+            letter-spacing: 121%;
+          }
+
+          span {
+            color: #111;
+            font-size: 20px;
+            font-family: "Poppins", sans-serif;
+            letter-spacing: 121%;
+          }
+        }
+      }
+    }
+  }
+
+  .products__btn {
+    background: #4c5eff;
+    color: #fff;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 15px;
+    margin: auto;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #3b49d1;
+    }
+  }
+}
