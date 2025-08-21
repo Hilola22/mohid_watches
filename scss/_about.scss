@@ -1,16 +1,21 @@
 .about {
   width: 100%;
+
   &-wrapper {
     text-align: center;
+
     .title {
       margin-top: 50px;
     }
   }
+
   .about-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 47px;
+    justify-items: center;
   }
+
   &__item {
     max-width: 524px;
     width: 100%;
@@ -22,6 +27,7 @@
     margin-top: 73px;
     padding: 40px 30px;
     text-align: left;
+
     .profile {
       width: 162.3px;
       height: 179px;
@@ -29,12 +35,14 @@
       object-fit: cover;
       margin-right: 28px;
     }
+
     h2 {
       font-family: "Inter", sans-serif;
       font-weight: 700;
       font-size: 24px;
       line-height: 100%;
     }
+
     p {
       font-family: "Inter", sans-serif;
       font-weight: 500;
@@ -45,22 +53,24 @@
       margin: 10px 0;
     }
   }
+
   .stars {
     width: 14px;
     height: 14px;
     display: flex;
   }
 }
-/* Planshet: 2 ta card, biroz kichikroq */
+
 @media (max-width: 764px) {
   .about-cards {
     grid-template-columns: repeat(2, 1fr);
-    gap: 30px; /* kartlar orasini biroz kamaytirdik */
+    gap: 30px;
+    justify-items: center;
   }
 
   .about__item {
-    max-width: 450px; /* biroz kichikroq */
-    height: 210px; /* balandlikni ham kamaytirdik */
+    max-width: 450px;
+    height: 210px;
     padding: 30px 20px;
 
     .profile {
@@ -82,13 +92,33 @@
 
 @media (max-width: 500px) {
   .about-cards {
-    grid-template-columns: 1fr; 
-    justify-items: center; 
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 20px;
   }
 
   .about__item {
-    width: 100%; 
-    max-width: 450px; 
-    height: 210px;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    padding: 25px 20px;
+    flex-direction: column; 
+    align-items: center;
+    text-align: left;
+
+    .profile {
+      width: 130px;
+      height: 145px;
+      margin: 0 0 15px 0; 
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+
+    p {
+      font-size: 14px;
+      max-width: 100%;
+    }
   }
 }
