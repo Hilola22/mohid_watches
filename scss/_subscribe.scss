@@ -7,8 +7,12 @@
     margin-top: 135px;
     margin-bottom: 91px;
     text-align: center;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
     border-radius: 22px;
 
     &__text {
@@ -74,58 +78,69 @@
 }
 
 @media (max-width: 990px) {
-  .subscribe-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-    height: auto;
-    padding: 20px;
-
-    &__text {
-      padding-left: 40px;
-    }
-
-    .input-area {
-      max-width: 100%;
-      margin-top: 20px;
-    }
-
-    &__image {
-      width: 220px;
+  .subscribe {
+    .subscribe-wrapper {
       height: auto;
-      margin: 20px auto;
+      padding: 20px;
+      grid-auto-flow: column;
+
+      &__text {
+        padding-left: 40px;
+      }
+
+      .input-area {
+        max-width: 100%;
+        margin-top: 20px;
+      }
+
+      &__image {
+        width: 220px;
+        height: auto;
+        margin: 20px auto;
+      }
     }
   }
 }
 
 @media (max-width: 576px) {
-  .subscribe-wrapper {
-    grid-template-columns: 1fr;
-    height: auto;
-    padding: 20px;
-
-    &__text {
-      padding-left: 0;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .input-area {
-      flex-direction: column;
+  .subscribe {
+    .subscribe-wrapper {
+      flex-direction: column-reverse;
       height: auto;
-      gap: 10px;
-      input {
-        margin-left: 0;
-        width: 100%;
-      }
-      button {
-        margin-left: 0;
-        width: 100%;
-      }
-    }
+      padding: 20px;
 
-    &__image {
-      width: 180px;
-      height: auto;
-      margin: 20px auto;
+      &__text {
+        padding-left: 0;
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 20px;
+        .subtitle {
+          font-size: 28px;
+        }
+        .title{
+          font-size: 18px;
+        }
+      }
+
+      .input-area {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+        input {
+          margin-left: 0;
+          width: 100%;
+        }
+        button {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+
+      &__image {
+        width: 180px;
+        height: auto;
+        margin: 50px auto;
+      }
     }
   }
 }

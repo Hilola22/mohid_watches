@@ -1,11 +1,3 @@
-const hamburger = document.querySelector(".navbar__icon");
-const popupMenu = document.querySelector(".popup-menu");
-
-hamburger.addEventListener("click", () => {
-  popupMenu.classList.toggle("active");
-});
-
-
 const buttons = document.querySelectorAll(".mobile-nav button");
 const popups = document.querySelectorAll(".popup");
 const closes = document.querySelectorAll(".popup__close");
@@ -29,4 +21,11 @@ window.addEventListener("click", (e) => {
       popup.style.display = "none";
     }
   });
+});
+
+const hamburger = document.querySelector(".navbar__icon");
+const popupMenu = document.querySelector(".popup-menu");
+
+hamburger.addEventListener("click", () => {
+  popupMenu.classList.toggle("active");
 });

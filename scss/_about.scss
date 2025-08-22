@@ -62,63 +62,77 @@
 }
 
 @media (max-width: 764px) {
-  .about-cards {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    justify-items: center;
-  }
-
-  .about__item {
-    max-width: 450px;
-    height: 210px;
-    padding: 30px 20px;
-
-    .profile {
-      width: 140px;
-      height: 155px;
-      margin-right: 20px;
+  .about {
+    .about-cards {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 30px;
+      justify-items: center;
+     
     }
 
-    h2 {
-      font-size: 22px;
-    }
+    .about__item {
+      max-width: 450px;
+      height: 210px;
+      padding: 30px 20px;
 
-    p {
-      font-size: 14px;
-      max-width: 220px;
+      .profile {
+        width: 140px;
+        height: 155px;
+        margin-right: 20px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 14px;
+        max-width: 220px;
+      }
+      .stars{
+        margin: 0 auto;
+      }
     }
   }
 }
 
 @media (max-width: 500px) {
-  .about-cards {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 20px;
-  }
-
-  .about__item {
-    width: 100%;
-    max-width: 450px;
-    height: auto;
-    padding: 25px 20px;
-    flex-direction: column; 
-    align-items: center;
-    text-align: left;
-
-    .profile {
-      width: 130px;
-      height: 145px;
-      margin: 0 0 15px 0; 
+  .about {
+    .about-cards {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      place-items: center;
+      gap: 20px;
     }
 
-    h2 {
-      font-size: 20px;
-    }
+    .about__item {
+      width: 100%;
+      max-width: 450px;
+      height: auto;
+      padding: 25px 20px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
 
-    p {
-      font-size: 14px;
-      max-width: 100%;
+      .profile {
+        width: 130px;
+        height: 145px;
+        margin: 0 0 15px 0;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 14px;
+        max-width: 100%;
+      }
+      .stars{
+        margin: auto;
+        margin-left: 150px;
+      }
     }
   }
 }
